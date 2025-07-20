@@ -1,0 +1,15 @@
+Steps for project : (1st hour)
+
+first created all empty folders 
+import express in app.js folder 
+import app.js in server.js folder which is going to be run . 
+Then create config.env file (to store confidentials keys )
+Now connect the project to the database in dbConnection.js file . 
+Make a file name error.js in middleware folder to controll the common errors. 
+Make a folder named routes where create three files for controlling application, job and user routes .
+Then created a schema of userSchema.js in models database .
+then created a middleware folder and a file named auth.js . 
+
+(2nd Hour )
+
+create userController.js file for 
