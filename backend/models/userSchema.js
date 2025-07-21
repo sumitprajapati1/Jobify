@@ -28,7 +28,7 @@ const userSchema = new mongoose.Schema({
     role:{
         type:String,
         required:[true,"please enter a valid role"],
-        enum:["Job seeker","Employer"]
+        enum:["job Seeker","Employer"]
     },
     createdAt:{
         type:Date,
@@ -51,7 +51,7 @@ userSchema.methods.comparePassword =async function (enteredPassword){
 }  
 
 // generating the jwt token for authorization
-userSchema.methods.getJWTToken = async function(){
+userSchema.methods.getJWTToken = function(){
     return jwt.sign({id:this._id},process.env.JWT_SECRET_KEY,{
         expiresIn:process.env.JWT_EXPIRE,
     })
