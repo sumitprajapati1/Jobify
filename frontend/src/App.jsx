@@ -6,8 +6,6 @@ import Login from "./components/Auth/Login";
 import Register from "./components/Auth/Register";
 import { Toaster } from "react-hot-toast";
 import axios from "axios";
-import Navbar from "./components/Layout/Navbar";
-import Footer from "./components/Layout/Footer";
 import Home from "./components/Home/Home";
 import Jobs from "./components/Job/Jobs";
 import JobDetails from "./components/Job/JobDetails";
@@ -56,7 +54,6 @@ const App = () => {
             <Route path="/job/me" element={<MyJobs />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-          <Footer />
           <Toaster />
         </BrowserRouter>
       </>
@@ -81,7 +78,6 @@ const App = () => {
             <Route path="/job/me" element={<MyJobs />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-          <Footer />
           <Toaster />
         </BrowserRouter>
       </>
@@ -91,8 +87,7 @@ const App = () => {
   // Default routes for all other users
   return (
     <>
-      <BrowserRouter>
-        <Navbar />
+      <BrowserRouter> 
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
@@ -105,7 +100,6 @@ const App = () => {
           <Route path="/job/me" element={<MyJobs />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
         <Toaster />
       </BrowserRouter>
     </>
