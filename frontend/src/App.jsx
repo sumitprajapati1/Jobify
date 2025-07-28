@@ -36,7 +36,7 @@ const App = () => {
       }
     };
     fetchUser();
-  }, []);
+  }, [isAuthorized]);
 
   // If authorized and user is Employer, show EmployerDashboard at root
   if (isAuthorized && user && user.role === "Employer") {
