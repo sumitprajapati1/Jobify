@@ -1,0 +1,244 @@
+.employer-dashboard-container {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f8fefb;
+  min-height: 100vh;
+  padding: 0;
+}
+
+.employer-dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2.5rem 1rem 2.5rem;
+  background: #fff;
+  border-bottom: 1px solid #e6f4ea;
+}
+
+.employer-dashboard-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0;
+  color: #222;
+}
+
+.employer-dashboard-header p {
+  color: #6b9080;
+  margin: 0 2rem;
+  font-size: 1.1rem;
+}
+
+.post-job-btn {
+  background: #1eea6c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.post-job-btn:hover {
+  background: #13c95c;
+}
+
+.employer-dashboard-main {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 2.5rem;
+}
+
+.employer-dashboard-sidebar {
+  width: 270px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #e6f4ea;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-card {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.profile-icon {
+  background: #1eea6c22;
+  color: #1eea6c;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+}
+.edit-profile-btn {
+  background: #fff;
+  color: #1eea6c;
+  border: 2px solid #1eea6c;
+  border-radius: 6px;
+  padding: 0.4rem 1.2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.edit-profile-btn:hover {
+  background: #1eea6c;
+  color: #fff;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px #e6f4ea;
+}
+.sidebar-nav li {
+  padding: 0.7rem 0;
+  font-size: 1.1rem;
+  color: #222;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+  border-bottom: 1px solid #e6f4ea;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 0 2px 8px #e6f4ea;
+}
+.sidebar-nav li.active, .sidebar-nav li:hover {
+  background: #1eea6c;
+  color: #fff;
+}
+
+.employer-dashboard-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.dashboard-stats {
+  display: flex;
+  gap: 2rem;
+}
+.stat-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #e6f4ea;
+  padding: 1.2rem 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stat-label {
+  color: #6b9080;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.dashboard-lists {
+  display: flex;
+  gap: 2rem;
+}
+.recent-jobs, .recent-applications {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #e6f4ea;
+  padding: 1.5rem 2rem;
+  flex: 1;
+}
+.recent-jobs h3, .recent-applications h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #222;
+}
+.job-card, .application-card {
+  background: #f8fefb;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 4px #e6f4ea;
+}
+.job-title-row, .applicant-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+.job-title {
+  font-weight: 600;
+  color: #222;
+}
+.job-status.active {
+  background: #1eea6c22;
+  color: #1eea6c;
+  border-radius: 6px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.job-details-row, .job-meta-row, .application-meta {
+  display: flex;
+  gap: 1.5rem;
+  color: #6b9080;
+  font-size: 0.98rem;
+  margin-bottom: 0.3rem;
+}
+.application-status.new {
+  background: #1eea6c22;
+  color: #1eea6c;
+  border-radius: 6px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.application-status.review {
+  background: #ffe06644;
+  color: #bfa100;
+  border-radius: 6px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.applicant-name {
+  font-weight: 600;
+  color: #222;
+}
+.application-details {
+  color: #222;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+.application-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.view-profile-btn, .schedule-interview-btn {
+  background: #fff;
+  color: #1eea6c;
+  border: 2px solid #1eea6c;
+  border-radius: 6px;
+  padding: 0.3rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.view-profile-btn:hover, .schedule-interview-btn:hover {
+  background: #1eea6c;
+  color: #fff;
+} 

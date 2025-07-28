@@ -3,7 +3,9 @@ import React, { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate, useParams } from "react-router-dom";
 import { Context } from "../../main";
-const Application = () => {
+import { API_BASE_URL } from "../../config";
+
+const Application = ({ jobId }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [coverLetter, setCoverLetter] = useState("");
@@ -14,6 +16,8 @@ const Application = () => {
   const { isAuthorized, user } = useContext(Context);
 
   const navigateTo = useNavigate();
+  const params = useParams();
+  const actualJobId = jobId || params.id;
 
   // Function to handle file input changes
   const handleFileChange = (event) => {
@@ -21,7 +25,6 @@ const Application = () => {
     setResume(resume);
   };
 
-  const { id } = useParams();
   const handleApplication = async (e) => {
     e.preventDefault();
     const formData = new FormData();
@@ -31,11 +34,11 @@ const Application = () => {
     formData.append("address", address);
     formData.append("coverLetter", coverLetter);
     formData.append("resume", resume);
-    formData.append("jobId", id);
+    formData.append("jobId", actualJobId);
 
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/api/v1/application/post",
+        `${API_BASE_URL}/v1/application/post`,
         formData,
         {
           withCredentials: true,
